@@ -19,16 +19,16 @@ let package = Package(
 		.target(name: "GXCoreModule_SD_SynchronizationWrapper",
 				dependencies: [
 					"GXCoreModule_SD_Synchronization",
-					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .tvOS, .watchOS])),
-					.product(name: "GXFoundation", package: "GXFoundation", condition: .when(platforms: [.iOS, .tvOS, .watchOS])),
-					.product(name: "GXObjectsModel", package: "GXObjectsModel", condition: .when(platforms: [.iOS, .tvOS, .watchOS])),
-					.product(name: "GXStandardClasses", package: "GXStandardClasses", condition: .when(platforms: [.iOS, .tvOS, .watchOS]))
+					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.watchOS, .tvOS, .iOS])),
+					.product(name: "GXFoundation", package: "GXFoundation", condition: .when(platforms: [.watchOS, .tvOS, .iOS])),
+					.product(name: "GXObjectsModel", package: "GXObjectsModel", condition: .when(platforms: [.watchOS, .tvOS, .iOS])),
+					.product(name: "GXStandardClasses", package: "GXStandardClasses", condition: .when(platforms: [.watchOS, .tvOS, .iOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXCoreModule_SD_Synchronization",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.0.0-beta+20230217024255.xcframework.zip",
-			checksum: "037a64120bf40046c12edd2f822ff7062182d305c755965370b1b5da03b03370"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.0.0-beta+20230217195542.xcframework.zip",
+			checksum: "05832e56f577f897ff5703e56ea456bbd0badf9f64ec90e0c0c001541b41d978"
 		)
 	]
 )
