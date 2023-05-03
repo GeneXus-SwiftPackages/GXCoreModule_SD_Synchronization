@@ -27,8 +27,8 @@ let package = Package(
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXCoreModule_SD_Synchronization",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.0.0-beta+20230502131235.xcframework.zip",
-			checksum: "4474010228138a43e3d78780da5736916c0b9b83b480d0ea5e5ffef74979fe1e"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.0.0-beta+20230503131704.xcframework.zip",
+			checksum: "adccfccbb82c728e006a0a0e367288cbf693845f340809283c3e79ab94c0359d"
 		)
 	]
 )
