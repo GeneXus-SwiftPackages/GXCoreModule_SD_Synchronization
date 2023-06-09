@@ -10,25 +10,25 @@ let package = Package(
 			targets: ["GXCoreModule_SD_SynchronizationWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", 108a71075c951998bdaa4037da97c513d0de271c),
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXFoundation.git", 74dde0711a4fa381198959e514e0bb2c76016d09),
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXObjectsModel.git", a1e27a7a0817831e5e96518e9434564ef4a7bc97),
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXStandardClasses.git", 03415737dfb393b3ba62f37a44bc9eeb851d321d)
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", revision: "63d2b45412060c871123a524ac6d9239b205962f"),
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXFoundation.git", revision: "195f2873dc3ed7d924d9a72b86f629015eadef71"),
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXObjectsModel.git", revision: "2850c07662d2291aeb37634ebb5c498d5ad0d6a4"),
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXStandardClasses.git", revision: "4ca72491fdc6a8fd7fdab99ed70e324d3a206d3f")
 	],
 	targets: [
 		.target(name: "GXCoreModule_SD_SynchronizationWrapper",
 				dependencies: [
 					"GXCoreModule_SD_Synchronization",
-					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.tvOS, .iOS, .watchOS])),
-					.product(name: "GXFoundation", package: "GXFoundation", condition: .when(platforms: [.tvOS, .iOS, .watchOS])),
-					.product(name: "GXObjectsModel", package: "GXObjectsModel", condition: .when(platforms: [.tvOS, .iOS, .watchOS])),
-					.product(name: "GXStandardClasses", package: "GXStandardClasses", condition: .when(platforms: [.tvOS, .iOS, .watchOS]))
+					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.tvOS, .watchOS, .iOS])),
+					.product(name: "GXFoundation", package: "GXFoundation", condition: .when(platforms: [.tvOS, .watchOS, .iOS])),
+					.product(name: "GXObjectsModel", package: "GXObjectsModel", condition: .when(platforms: [.tvOS, .watchOS, .iOS])),
+					.product(name: "GXStandardClasses", package: "GXStandardClasses", condition: .when(platforms: [.tvOS, .watchOS, .iOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXCoreModule_SD_Synchronization",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.0.0-beta+20230608211628.xcframework.zip",
-			checksum: "f4b9151d4600ece69642a3e43bb84d487a999b0600d8cb3b1eac9fe928f70e8a"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.0.0-beta+20230609175617.xcframework.zip",
+			checksum: "e49005025d37b6407403f3d05086aa8e7db70d4d412df31048a3d085c29c76b3"
 		)
 	]
 )
