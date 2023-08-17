@@ -10,25 +10,19 @@ let package = Package(
 			targets: ["GXCoreModule_SD_SynchronizationWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.2.0-beta.1"),
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXFoundation.git", exact: "1.2.0-beta.1"),
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXObjectsModel.git", exact: "1.2.0-beta.1"),
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXStandardClasses.git", exact: "1.2.0-beta.1")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.2.0-beta.7")
 	],
 	targets: [
 		.target(name: "GXCoreModule_SD_SynchronizationWrapper",
 				dependencies: [
 					"GXCoreModule_SD_Synchronization",
-					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.tvOS, .iOS, .watchOS])),
-					.product(name: "GXFoundation", package: "GXFoundation", condition: .when(platforms: [.tvOS, .iOS, .watchOS])),
-					.product(name: "GXObjectsModel", package: "GXObjectsModel", condition: .when(platforms: [.tvOS, .iOS, .watchOS])),
-					.product(name: "GXStandardClasses", package: "GXStandardClasses", condition: .when(platforms: [.tvOS, .iOS, .watchOS]))
+					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .watchOS, .tvOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXCoreModule_SD_Synchronization",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.2.0-beta.1.xcframework.zip",
-			checksum: "67d60c1fc8006aff5dce412bcba06f9bc576ac2017cdee19cff2b63dcca7a7af"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.2.0-beta.7.xcframework.zip",
+			checksum: "9e3346a9d268a2e1bc75e286bd4f3d66be90e49d1a54e8d4d353bb49f37d8713"
 		)
 	]
 )
