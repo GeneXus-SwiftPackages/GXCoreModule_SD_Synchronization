@@ -10,7 +10,7 @@ let package = Package(
 			targets: ["GXCoreModule_SD_SynchronizationWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.4.26")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.4.27")
 	],
 	targets: [
 		.target(name: "GXCoreModule_SD_SynchronizationWrapper",
@@ -21,8 +21,8 @@ let package = Package(
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXCoreModule_SD_Synchronization",
-			url: "https://pkgs.genexus.dev/iOS/releases/GXCoreModule_SD_Synchronization-1.4.26.xcframework.zip",
-			checksum: "03ad17a1510c6e1bd53c5cf24c122300a63d592469e1f43c21f29adccb7ade30"
+			url: "https://pkgs.genexus.dev/iOS/releases/GXCoreModule_SD_Synchronization-1.4.27.xcframework.zip",
+			checksum: "f5b1aa1945d25310ac430e4326a750e29ef037871a0df9a64637c6ee93fe273b"
 		)
 	]
 )
