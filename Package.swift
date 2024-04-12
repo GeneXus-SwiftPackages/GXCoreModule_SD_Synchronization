@@ -3,26 +3,26 @@ import PackageDescription
 
 let package = Package(
 	name: "GXCoreModule_SD_Synchronization",
-	platforms: [.iOS("12.0"), .watchOS("9.0"), .tvOS("12.0")],
+	platforms: [.iOS("12.0"), .watchOS("9.0"), .tvOS("12.0"), .visionOS("1.0")],
 	products: [
 		.library(
 			name: "GXCoreModule_SD_Synchronization",
 			targets: ["GXCoreModule_SD_SynchronizationWrapper"])
 	],
 	dependencies: [
-		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.6.0-beta.1")
+		.package(url: "https://github.com/GeneXus-SwiftPackages/GXCoreBL.git", exact: "1.6.0-beta.2")
 	],
 	targets: [
 		.target(name: "GXCoreModule_SD_SynchronizationWrapper",
 				dependencies: [
 					"GXCoreModule_SD_Synchronization",
-					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .watchOS, .tvOS]))
+					.product(name: "GXCoreBL", package: "GXCoreBL", condition: .when(platforms: [.iOS, .watchOS, .tvOS, .visionOS]))
 				],
 				path: "Sources"),
 		.binaryTarget(
 			name: "GXCoreModule_SD_Synchronization",
-			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.6.0-beta.1.xcframework.zip",
-			checksum: "f409e46bcdca64c647b4742073665b5041c9d0523ff6c69182ad5042c3957823"
+			url: "https://pkgs.genexus.dev/iOS/beta/GXCoreModule_SD_Synchronization-1.6.0-beta.2.xcframework.zip",
+			checksum: "60338a8409d038773e4e38e5256a3a3c239dde4736be6c250d7f17f90759f2ac"
 		)
 	]
 )
